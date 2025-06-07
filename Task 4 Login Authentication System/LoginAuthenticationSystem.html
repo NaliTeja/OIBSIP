@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔐 Login System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="LoginAuthenticationSystem.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="auth-box">
+    <h2 class="login-title">🔐 LOGIN</h2>
+    
+    <input type="text" id="login-username" placeholder="👤 Username / Email / Phone">
+    <input type="password" id="login-password" placeholder="🔒 Password">
+
+    <div class="action-row">
+      <button onclick="handleLogin()">➡️ Submit</button>
+      <a class="forgot-link" onclick="showResetForm()">🔁 Forgot?</a>
+    </div>
+
+    <button class="register-btn" onclick="showRegisterForm()">📝 Register</button>
+  </div>
+
+  <div class="auth-box" id="register-form" style="display:none">
+    <h2>🆕 Create Account</h2>
+    <input type="text" id="reg-email" placeholder="📧 Email">
+    <input type="text" id="reg-username" placeholder="👤 Username">
+    <input type="password" id="reg-password" placeholder="🔐 Create Password" oninput="checkStrength(this.value)">
+    <input type="password" id="reg-confirm" placeholder="🔁 Confirm Password">
+    <div id="strength-indicator"></div>
+    <label><input type="checkbox" id="remember-me"> 💾 Remember Me</label>
+    <button onclick="handleRegister()">✅ Register</button>
+  </div>
+
+  <div class="auth-box" id="reset-form" style="display:none">
+    <h2>🔁 Reset Password</h2>
+    <input type="password" id="new-password" placeholder="🆕 New Password" oninput="checkStrength(this.value)">
+    <input type="password" id="confirm-new-password" placeholder="🔁 Confirm New Password">
+    <div id="reset-strength-indicator"></div>
+    <button onclick="resetPassword()">🔄 Update Password</button>
+  </div>
+
+  <script src="LoginAuthenticationSystem.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* Make all buttons look 3D */
+.btn {
+  box-shadow: 4px 4px 8px rgba(6, 1, 6, 0.4), 
+              -2px -2px 5px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: inner glow when button is active */
+.btn:active {
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.5), 
+              inset -2px -2px 4px rgba(255, 255, 255, 0.05);
+}
+
+
+
+  /* Reset and base styling */
+body {
+  background: linear-gradient(135deg, #2fdbee, #203ae0);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator container */
+.calculator {
+  width: 360px;
+  background: #fbfbfb;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* Casio branding */
+.brand {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+#display {
+  width: 320px;            /* slightly less than calculator width */
+  max-width: 90%;          /* responsive on smaller screens */
+  height: 60px;
+  background: #000;
+  color: #00ffcc;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;      /* more horizontal padding for better spacing */
+  font-size: 24px;
+  text-align: right;
+  box-shadow: inset 0 0 10px #0f766e;
+  display: block;
+  margin: 0 auto 15px;     /* center horizontally & margin below */
+}
+
+
+/* Grid layout */
+.buttons {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Button base style */
+.btn {
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: linear-gradient(145deg, #374151, #1f2937);
+}
+
+/* Button glow on hover */
+.btn:hover {
+  
+  box-shadow: inset 2px 2px 5px #000204, inset -2px -2px 5px #090202;
+  transform: translateY(-2px);
+}
+
+
+/* Active button press effect */
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Color-coded button groups */
+.btn.operator {
+  background: linear-gradient(to right, #f59e0b, #ef4444);
+  color: white;
+}
+
+.btn.operator:hover {
+  box-shadow: 0 0 10px #fb923c, 0 0 20px #f87171;
+}
+
+.btn.trig {
+  background: linear-gradient(to right, #8b5cf6, #6366f1);
+}
+
+.btn.trig:hover {
+  box-shadow: 0 0 10px #a78bfa, 0 0 20px #818cf8;
+}
+
+.btn.func {
+  background: linear-gradient(to right, #06b6d4, #3ba6d7);
+}
+
+.btn.func:hover {
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px #0ea5e9;
+}
+
+.btn.equal {
+  grid-column: span 4;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  font-size: 20px;
+}
+
+.btn.equal:hover {
+  box-shadow: 0 0 10px #4ade80, 0 0 20px #22c55e;
+}
+
+/* AC and DEL buttons */
+.btn.special {
+  background: linear-gradient(to right, #f43f5e, #e11d48);
+}
+
+.btn.special:hover {
+  box-shadow: 0 0 10px #fb7185, 0 0 20px #f43f5e;
+}
+  background: linear-gradient(145deg, #374151, #1f2937);
+}
+
+/* Button glow on hover */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #3b82f6, 0 0 20px #2563eb;
+}
+
+/* Active button press effect */
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Color-coded button groups */
+.btn.operator {
+  background: linear-gradient(to right, #f59e0b, #ef4444);
+  color: white;
+}
+
+.btn.operator:hover {
+  box-shadow: 0 0 10px #fb923c, 0 0 20px #f87171;
+}
+
+.btn.trig {
+  background: linear-gradient(to right, #8b5cf6, #6366f1);
+}
+
+.btn.trig:hover {
+  box-shadow: 0 0 10px #a78bfa, 0 0 20px #818cf8;
+}
+
+.btn.func {
+  background: linear-gradient(to right, #06b6d4, #0ea5e9);
+}
+
+.btn.func:hover {
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px #0ea5e9;
+}
+
+.btn.equal {
+  grid-column: span 4;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  font-size: 20px;
+}
+
+.btn.equal:hover {
+  box-shadow: 0 0 10px #4ade80, 0 0 20px #22c55e;
+}
+
+/* AC and DEL buttons */
+.btn.special {
+  background: linear-gradient(to right, #f43f5e, #e11d48);
+}
+
+.btn.special:hover {
+  box-shadow: 0 0 10px #fb7185, 0 0 20px #f43f5e;
+}

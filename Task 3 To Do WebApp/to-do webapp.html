@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibrant ToDo App</title>
+  <link rel="stylesheet" href="to-do webapp.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>✨ TO DO LIST</h2>
+    <button id="toggleMode" title="Toggle Dark / Light Mode">🌗</button>
+    <input type="search" id="searchInput" placeholder="🔍 Search tasks..." />
+  </aside>
+
+  <main class="main-content">
+    <section class="task-inputs">
+      <input type="text" id="taskTitle" placeholder="📝 Task Title" />
+      <textarea id="taskDesc" placeholder="🖋️ Task Description"></textarea>
+      <select id="taskPriority" aria-label="Select priority">
+        <option value="" disabled selected>🚦 Priority</option>
+        <option value="low">Low 🟢</option>
+        <option value="medium">Medium 🟠</option>
+        <option value="high">High 🔴</option>
+      </select>
+      <input type="date" id="taskDue" aria-label="Due date" />
+      <select id="taskCategory" aria-label="Select category">
+        <option value="" disabled selected>📁 Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Health">Health</option>
+        <option value="Other">Other</option>
+      </select>
+      <button id="addTaskBtn">➕ Add Task</button>
+    </section>
+
+    <section class="task-list-container" id="pendingTasksSection">
+      <h3>📌 Pending Tasks</h3>
+      <ul id="pendingTasks"></ul>
+    </section>
+
+    <section class="task-list-container" id="completedTasksSection">
+      <h3>✅ Completed Tasks</h3>
+      <ul id="completedTasks"></ul>
+    </section>
+    <footer>
+    <p>Made with ❤️ by [Nali Penchala Teja] | Oasis Infobyte Internship</p>
+  </footer>
+  </main>
+
+  <script src="to-do webapp.js"></script>
+</body>
+</html>

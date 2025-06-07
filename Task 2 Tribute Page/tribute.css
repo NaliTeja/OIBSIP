@@ -1,0 +1,226 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: url('indira\ background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  background: rgba(0,0,0,0.75);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #9fd3c7;
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 250px;
+  border-radius: 10px;
+  border: 3px solid #ffd369;
+  display: inline-block;
+}
+
+.section {
+  margin: 30px 0;
+}
+
+.section h2 {
+  border-left: 5px solid #ffd369;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  color: #f6d776;
+}
+
+.section p,
+.section ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+ul {
+  list-style: square;
+  margin-left: 30px;
+}
+
+.highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-left: 5px solid #ff9a76;
+  border-radius: 8px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #ffdf91;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  border-left: 5px solid #ffa500;
+  padding-left: 12px;
+  min-height: 70px;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ffd369;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 45px;
+  color: #000;
+  box-shadow: 0 0 10px #ffd369;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+#scrollTopBtn:hover {
+  background-color: #ff9a00;
+}
+
+/* Sliding Animations */
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+/* Animation classes triggered by JS */
+.animate-slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.animate-slide-in-right {
+  animation-name: slideInRight;
+}
+
+.animate-slide-in-up {
+  animation-name: slideInUp;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .photo {
+    width: 180px;
+  }
+  .section h2 {
+    font-size: 1.3rem;
+  }
+  blockquote {
+    font-size: 1rem;
+  }
+}
+.footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff33;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1rem;
+  opacity: 0; /* for animation */
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+.footer a {
+  color: #ffd369;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.author {
+  margin-top: 8px;
+  color: #ffcc66;
+  font-style: italic;
+}
+
+/* For the slide-in-up animation */
+.animate-slide-in-up.footer {
+  animation-name: slideInUp;
+}

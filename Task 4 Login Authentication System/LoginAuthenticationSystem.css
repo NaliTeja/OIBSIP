@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: url('loginbackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.auth-box {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideUp 1s ease-in-out;
+}
+
+.login-title {
+  font-size: 28px;
+  color: #00acc1;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #e0f7fa;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f3f3;
+  transition: 0.3s ease;
+}
+
+.auth-box input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  background: #00bcd4;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #008ba3;
+  transform: scale(1.03);
+}
+
+.forgot-link {
+  padding-left: 15px;
+  color: #00796b;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #004d40;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-btn {
+  margin-top: 25px;
+  width: 100%;
+  background: #ff7043;
+}
+
+.register-btn:hover {
+  background: #e64a19;
+}
+
+#strength-indicator,
+#reset-strength-indicator {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
