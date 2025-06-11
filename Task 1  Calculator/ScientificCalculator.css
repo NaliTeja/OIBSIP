@@ -1,3 +1,5 @@
+
+
 /* Make all buttons look 3D */
 .btn {
   box-shadow: 4px 4px 8px rgba(6, 1, 6, 0.4), 
@@ -140,7 +142,6 @@ body {
 
 .btn.special:hover {
   box-shadow: 0 0 10px #fb7185, 0 0 20px #f43f5e;
-}
   background: linear-gradient(145deg, #374151, #1f2937);
 }
 
